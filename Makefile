@@ -23,3 +23,13 @@ update:; forge update
 
 # Builds
 build  :; forge clean && forge build --optimize --optimize-runs 1000000
+
+setup-yarn:
+	yarn 
+
+local-node: setup-yarn 
+	yarn hardhat node 
+
+deploy:
+	forge create StakeContract --private-key ${PRIVATE_KEY} # --rpc-url 
+	

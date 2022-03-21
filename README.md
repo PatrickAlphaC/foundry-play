@@ -31,4 +31,5 @@ What do we want to do with frameworks?
 git clone https://github.com/PatrickAlphaC/foundry-play
 cd foundry-play
 foundryup
+make
 ```
