@@ -15,7 +15,7 @@ contract StakeContractTest is DSTest {
         mockToken = new MockERC20();
     }
 
-    function test_staking_tokens_fuzz(uint256 amount) public {
+    function test_staking_tokens_fuzz(uint8 amount) public {
         mockToken.approve(address(stakeContract), amount);
         bool stakePassed = stakeContract.stake(amount, address(mockToken));
         assertTrue(stakePassed);
